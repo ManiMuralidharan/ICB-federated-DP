@@ -1,0 +1,46 @@
+# =============================================================================
+# .gitignore  --  keep patient-level data, raw clinical sources, and
+#                 credentials OUT of the repository.
+# =============================================================================
+
+# ---- Patient-level / identifiable outputs (NEVER commit) --------------------
+Predictions_Detailed*.csv
+Expression_Pooled*.csv
+*_patient_level*.csv
+*_per_patient*.csv
+
+# ---- Raw clinical / RECIST source supplements (not redistributable) ---------
+clinical/
+processed/
+*_clean.csv
+Hugo_mmc1.xls
+Riaz_response.xlsx
+Gide_clinical.tsv
+Liu_MOESM4.xlsx
+IMvigor_clinical.csv
+
+# ---- Credentials / cloud secrets --------------------------------------------
+*.pem
+*.key
+.aws/
+aws_ip.txt
+instance_*.txt
+
+# ---- Python / env -----------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+env/
+miniforge3/
+
+# ---- OS / editor ------------------------------------------------------------
+.DS_Store
+*~
+.ipynb_checkpoints/
+
+# NOTE: summary, non-identifiable result files ARE tracked, e.g.
+#   results/Comprehensive_Results.csv
+#   results/Privacy_Audit.csv
+#   results/Coefficients_Detailed.csv
+#   CR_PR_Sensitivity.csv
+#   CR_PR_reclassification.csv
