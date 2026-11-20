@@ -6,4 +6,4 @@ scikit-learn==1.5.1
 torch==2.2.2
 opacus==1.5.2
 flwr[simulation]==1.9.0
-ray==2.10.0
+ray==2.11.0
